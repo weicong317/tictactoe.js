@@ -1,54 +1,256 @@
 body {
-	background: linear-gradient(yellow, red);
-	font-family: Yatra One;
+	background: linear-gradient(75deg, yellow, red, black);
+	color: white;
 }
-header, section {
-	background-color: #ccccb3;
-	margin: 2px 10px;
-	padding: 0px 10px;
-	border-radius: 5px;
+* {
+	box-sizing: border-box;
 }
-img {
-	width: 100px;
-	height: 100px;
+a {
+	text-decoration: none;
 }
-header img {
-	width: 250px;
-	height: 250px;
-	border-radius: 125px;
-	display: block;
-	margin: 0 auto;
+a:visited {
+	color: white;
+}
+a:hover {
+	font-style: italic;
+}
+li {
+	font-weight: bold;
+}
+h2, h3, h4 {
+	text-decoration: underline;
 }
 p {
 	text-align: justify;
-	text-indent: 50px;
+	text-indent: 30px;
 }
-p:first-letter {
-	font-size: 2em;
+#top {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
 }
-header p a {
-	display: inline;
-	text-decoration: none;
-	font-style: italic;
-	color: purple;
+nav {
+	display: flex;
+	order: -1;
+	justify-content: flex-end;
+	width: 100%;
 }
-h1 {
-	text-align: center;
-	margin: auto;
+nav ul {
+	list-style: none;
+	padding: 0;
 }
-h2 {
-	text-decoration: underline;
-}
-.title {
-	font-weight: bold;
-	border-right: 1px solid black; /*ask can the list in horizontal direction*/
-}
-h1, h2 {
-	font-family: Meera Inimai;
-}
-.change {
-	color: red;
-}
-#type ul li {
+nav ul li {
 	display: inline-block;
+	margin: 0 5px;
+}
+header {
+	order: 1;
+	display: flex;
+	width: 100%;
+	align-items: center;
+}
+header h1 {
+	order: 2;
+	margin: -10px 0 0 10px;
+}
+#ProfilePic {
+	margin: -30px 10px 0 20px;
+	width: 150px;
+	height:150px;
+	border-radius: 75px;
+}
+#content {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+}
+#about {
+	order: -1;
+	width: 100%;
+}
+#about h2, #about p, #info1 h2, #info1 img, #info2 h3, #info2 h4, #info2 p, #fact h2, #pic img, #video h2, #video iframe {
+	margin: 10px;
+}
+#pic img {
+	width: 260px;
+	height: 200px;
+}
+#info1, #info2, #video {
+	width: 100%;
+}
+@media (min-width: 1280px) {
+	aside {
+		width: 15%;
+	}
+	#info {
+		width: 85%;
+	}
+	#left {
+		width: 70%;
+		float: left;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: row;
+	}
+	#fact {
+		width: 30%;
+		float: right;
+	}
+	#info1 h2 {
+		float: left;
+	}
+	#info1 img {
+		float: left;
+		width: 40%;
+		clear: left;
+	}
+	#info1 p {
+		float: right;
+		width: 50%;
+		margin: 70px 10px 0;
+	}
+	iframe {
+		width: 560px;
+		height: 315px;
+	}
+}
+@media (max-width: 768px) {
+	* {
+		padding-right: 2px;
+	}
+	aside {
+		width: 30%;
+	}
+	#info {
+		width: 70%;
+	}
+	#left {
+		width: 100%;
+		float: left;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: row;
+	}
+	#fact {
+		width: 100%;
+		clear: left;
+	}
+	#info1 {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	#info1 h2 {
+		width: 100%;
+	}
+	#info1 img {
+		width: 150px;
+		height: 220px;
+	}
+	#info1 p {
+		width: 100%;
+		margin: 10px 10px 0;
+	}
+	iframe {
+		width: auto;
+		height: auto;
+	}
+	#pic img {
+		width: 230px;
+		height: 180px;
+	}
+}
+@media (max-width: 480px) {
+	* {
+		padding-right: 2px;
+	}
+	aside {
+		width: 30%;
+	}
+	#info {
+		width: 70%;
+	}
+	#left {
+		width: 100%;
+		float: left;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: row;
+	}
+	#fact {
+		width: 100%;
+		clear: left;
+	}
+	#info1 {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	#info1 h2 {
+		width: 100%;
+	}
+	#info1 img {
+		width: 150px;
+		height: 220px;
+	}
+	#info1 p {
+		width: 100%;
+		margin: 10px 10px 0;
+	}
+	iframe {
+		width: 240px;
+		height: auto;
+	}
+}
+@media (max-width: 400px) {
+	#top {
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-start;
+		flex-wrap: wrap;
+	}
+	nav {
+		display: flex;
+		order: -1;
+		flex-direction: column;
+		flex-wrap: wrap;
+		width: 30%;
+	}
+	header h1 {
+		order: 2;
+		margin: -40px 0 0 10px;
+	}
+	#ProfilePic {
+		margin: -60px 10px 0 20px;
+		width: 150px;
+		height:150px;
+		border-radius: 75px;
+	}
+}
+@media (max-width: 374px) {
+	iframe {
+		width: 200px;
+		height: auto;
+	}
+}
+aside ul {
+	margin: 5px;
+	padding: 0 20px;
+	margin-right: 5px;
+	padding-right: 0;
+}
+#pic {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	width: 100%;
+}
+footer {
+	padding: 2px;
+	margin: 0;
+	bottom: 0;
+	right: 20px;
+	position: fixed;
+	background-color: black;
+	border-radius: 10px 10px 0 0;
 }
