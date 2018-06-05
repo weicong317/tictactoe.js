@@ -1,80 +1,88 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Avenger: IRONMAN</title>
-		<meta name="viewport" content="width=device-width" />
-		<link type="text/css" rel="stylesheet" href="./style.css" /> 
-	</head>
-	<body>
-		<section id="top">
-			<nav>
-				<ul>
-					<li><a href="https://en.wikipedia.org/wiki/List_of_Avengers_members" target="_blank">Colleague</a></li>
-					<li><a href="https://en.wikipedia.org/wiki/List_of_Iron_Man_enemies" target="_blank">Enemy</a></li>
-					<li><a href="#">Contact Us</a></li>
-				</ul>
-			</nav>
-			<header>
-				<h1>IRONMAN</h1>
-				<img src="./image/ironman.jpg" alt="Ironman" id="ProfilePic" />
-			</header>
+<html lang = "en">
+<head>
+	<meta charset = "utf-8">
+	<link type = "text/css" rel = "stylesheet" href = "./style.css">
+	<title>Tic Tac Toe_Ver 2</title>
+</head>
+<body>
+	<header>
+		<div>
+			<img id = "icon" src = "./tictactoeicon.png" title = "Page Icon">
+			<h1>Tic Tac Toe</h1>
+		</div>
+		<nav>
+			<ul>
+				<li>About
+					<ul>
+						<li><a href = "#" id = "aboutButton">What is this?</a></li>
+						<li><a href = "#" id = "historyButton">History</a></li>
+					</ul>
+				</li>
+				<li><a href = "#" id = "gameplayButton">Gameplay</a></li>
+				<li>Contact Me
+					<ul>
+						<li id = "email"><img id = "emailImg" src = "./email.png" title = "Email Icon">weicong317@gmail.com</li>
+					</ul>
+				</li>			
+			</ul>
+		</nav>
+	</header>
+	<section id = "content">
+		<section id = "whatIsThis" class = "hidden">
+			<p>Tic-tac-toe (also known as noughts and crosses or Xs and Os) is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.</p>
+			<p>Players soon discover that the best play from both parties leads to a draw. Hence, tic-tac-toe is most often played by young children.</p>
+			<p>Because of the simplicity of tic-tac-toe, it is often used as a pedagogical tool for teaching the concepts of good sportsmanship and the branch of artificial intelligence that deals with the searching of game trees. It is straightforward to write a computer program to play tic-tac-toe perfectly, to enumerate the 765 essentially different positions (the state space complexity), or the 26,830 possible games up to rotations and reflections (the game tree complexity) on this space.</p>
+			<p>The game can be generalized to an m,n,k-game in which two players alternate placing stones of their own color on an m×n board, with the goal of getting k of their own color in a row. Tic-tac-toe is the (3,3,3)-game. Harary's generalized tic-tac-toe is an even broader generalization of tic tac toe. It can also be generalized as a nd game. Tic-tac-toe is the game where n equals 3 and d equals 2. If played properly, the game will end in a draw making tic-tac-toe a futile game.</p>
 		</section>
-		<hr />
-		<section id="content">
-			<aside>
-				<ul>
-					<li><a href="#about">About Ironman</a></li>
-					<li><a href="#info1">Latest Armor</a></li>
-						<ul>
-							<li><a href="#info2">3 Armor's Features</a></li>
-						</ul>
-					<li><a href="#video">Suit Up Moment</a></li>
-					<li><a href="#fact">Fun Fact About Avenger</a></li>
-				</ul>				
-			</aside>
-			<div id="about">
-				<h2>About Ironman</h2>
-				<p>A wealthy American business magnate, playboy, and ingenious scientist, Anthony Edward "Tony" Stark suffers a severe chest injury during a kidnapping. When his captors attempt to force him to build a weapon of mass destruction, he instead creates a powered suit of armor to save his life and escape captivity.</p>
-				<p>Later, Stark develops his suit, adding weapons and other technological devices he designed through his company, Stark Industries. He uses the suit and successive versions to protect the world as Iron Man. Although at first concealing his true identity, Stark eventually declared that he was, in fact, Iron Man in a public announcement.</p>
-				<hr />
+		<section id = "history" class = "hidden">
+			<p>Games played on three-in-a-row boards can be traced back to ancient Egypt, where such game boards have been found on roofing tiles dating from around 1300 BCE.</p>
+			<p>An early variation of tic-tac-toe was played in the Roman Empire, around the first century BC. It was called terni lapilli (three pebbles at a time) and instead of having any number of pieces, each player only had three, thus they had to move them around to empty spaces to keep playing. The game's grid markings have been found chalked all over Rome. Another closely related ancient game is Three Men's Morris which is also played on a simple grid and requires three pieces in a row to finish, and Picaria, a game of the Puebloans.</p>
+			<p>The different names of the game are more recent. The first print reference to "noughts and crosses", the British name, appeared in 1864. In his novel Can You Forgive Her? (1864) Anthony Trollope refers to a clerk playing "tit-tat-toe". The first print reference to a game called "tick-tack-toe" occurred in 1884, but referred to "a children's game played on a slate, consisting in trying with the eyes shut to bring the pencil down on one of the numbers of a set, the number hit being scored". "Tic-tac-toe" may also derive from "tick-tack", the name of an old version of backgammon first described in 1558. The U.S. renaming of "noughts and crosses" as "tic-tac-toe" occurred in the 20th century.</p>
+			<p>In 1952, OXO (or Noughts and Crosses), developed by British computer scientist Alexander S. Douglas for the EDSAC computer at the University of Cambridge, became one of the first known video games. The computer player could play perfect games of tic-tac-toe against a human opponent.</p>
+			<p>In 1975, tic-tac-toe was also used by MIT students to demonstrate the computational power of Tinkertoy elements. The Tinkertoy computer, made out of (almost) only Tinkertoys, is able to play tic-tac-toe perfectly. It is currently on display at the Museum of Science, Boston.</p>
+		</section>
+		<section id = "gameplay" class = "hidden">
+			<p>The goal of tic-tac-toe is to be the first player to get three in a row on a 3 x 3 grid, or four in a row in a 4 x 4 grid.</p>
+			<p>To start, one player draws a board, creating a grid of squares, usually 3 x 3 or 4 x 4.</p>
+			<p>The player who is playing "O" always goes first.</p>
+			<p>Players alternate placing Xs and Os on the board until either one player has three in a row, horizontally, vertically, or diagonally; or all nine squares are filled.</p>
+			<p>If a player is able to draw three of their Xs or three of their Os in a row, then that player wins.</p>
+			<p>If all nine squares are filled and neither player has three in a row, the game is a draw.</p>
+			<p>Gameplay is the same if you are playing on a 4 x 4 grid. The "X" player goes first. And, players alternate placing Xs and Os on the board until a row is completed horizontally, vertically, or diagonally, or all 16 squares are filled. If all 16 squares are filled and neither player has four in a row, the game is a draw.</p>
+		</section>
+		<aside>
+			<p>Select the size of game:</p>
+			<select id = "sizeSelector" size = "1">
+				<option selected>3 X 3</option>
+				<option>4 X 4</option>
+				<option>5 X 5</option>
+				<option>6 X 6</option>
+			</select>
+			<p>Select your opponent:</p>
+			<select id = "opponentSelector" size = "1">
+				<option selected>Human</option>
+				<option>Computer</option>
+			</select>
+			<button id = "start-button">Start Game</button>
+			<div>
+				<button id = "again-button">Play Again</button>
 			</div>
-			<div id="info">
-				<section id="left">
-					<div id="info1">
-						<h2>Latest Armor</h2>
-						<img src="./image/mark50.png" alt="Mark 50" />
-						<p>The Mark 50 is Tony Stark’s fiftieth Iron Man suit. It was built after the Mark 47. The Information about Mark 48 and 49 is still unconfirmed, however Kevin Feige confirmed that this armor is named as the Mark 50. It is used to battle Thanos and his allies.</p>
-						<p>This armor is more advanced than any other previous armors, directly attached to the arc reactor on Tony's Chest, it possesses many capabilities and useful functions for Tony to use at his disposal. Like the Marks 45, 46, and 47, this armor has the F.R.I.D.A.Y OS built into it and possesses some of the most advanced technology and weapons compared to other armors Tony Stark has built.</p>
-						<p>The Mark 50 can use built-in nano booster wings for a boost in speed and stabilized flight when needed. It also has a nanotech beam mounted in the left and right arm which can be used to shoot a beam of nanotech, which can be used to repair or build. Tony uses this beam to stop Thanos from closing his fist to use the Infinity Stones, as well as healing the stab wound in his abdomen when Thanos stabs him.</p>
-					</div>
-					<div id="info2">
-						<h3>3 Armor's Features</h3>
-						<h4>Nanotechnology</h4>
-						<p>The Mark 50 features a very advanced Nanotechnology beyond its predecessors, the Mark 46 and Mark 47. This Nanotechnology seems to be similar to Wakandan tech, but this theory has not been confirmed yet.</p>
-						<h4>Deformable</h4>
-						<p>Mark 50 can be completely disintegrated and stored within the special compartment within the Arc Reactor, with its advanced Nanotechnology. Tony usually uses this technology to partially remove the helmet for comfortable vision.</p>
-						<h4>Integrated Control Interface</h4>
-						<p>Despite F.R.I.D.A.Y OS disconnected from the Suit when Tony left the Earth's stratosphere due to the lack of internet connection, he was able to normally operate the suit's various functions. This suggests that the suit has an integrated control system that allows the user to control the suit without any AI assistance.</p>
-					</div>
-					<div id="video">
-						<h2>Suit Up Moment</h2>
-						<iframe src="https://www.youtube.com/embed/HpX1mDEw1gk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-						</iframe>
-					</div>
-				</section>
-				<aside id="fact">
-					<h2>Fun Fact About Avenger</h2>
-					<section id="pic">
-						<img src="./image/funfact2.png" alt="Fun fact about avenger" />
-						<img src="./image/funfact.png" alt="Fun fact about avenger" />
-						<img src="./image/funfact3.png" alt="Fun fact about avenger" />
-						<img src="./image/funfact4.png" alt="Fun fact about avenger" />
-					</section>
-				</aside>
+			<div>
+				<button id = "reset-button">Reset</button>
+			</div>
+		</aside>
+		<section id = "main-content" class = "hidden">
+			<p id = "result"></p>
+			<div id = "box-container">
+			</div>
+			<div id = "status">
+				<p>Player 1: <span id = "player1Status">0</span></p>
+				<p>Tie: <span id = "tieStatus">0</span></p>
+				<p>Player 2: <span id = "player2Status">0</span></p>
 			</div>
 		</section>
-		<footer>
-			<a href="#">Back to top<a>
-		</footer>
-	</body>
+	</section>
+	<script type = "text/javascript" src = "./script.js"></script>
+</body>
 </html>
