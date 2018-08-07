@@ -13,8 +13,10 @@
 		</div>
 		<nav>
 			<ul>
+				<!-- to have drop down list when click -->
 				<li>About
 					<ul>
+						<!-- not link to new page but pop up a page by changing the css -->
 						<li><a href = "#" id = "aboutButton">What is this?</a></li>
 						<li><a href = "#" id = "historyButton">History</a></li>
 					</ul>
@@ -52,6 +54,7 @@
 			<p>Gameplay is the same if you are playing on a 4 x 4 grid. The "X" player goes first. And, players alternate placing Xs and Os on the board until a row is completed horizontally, vertically, or diagonally, or all 16 squares are filled. If all 16 squares are filled and neither player has four in a row, the game is a draw.</p>
 		</section>
 		<aside>
+			<!-- let user to choose the size of th board and the opponent -->
 			<p>Select the size of game:</p>
 			<select id = "sizeSelector" size = "1">
 				<option selected>3 X 3</option>
@@ -64,14 +67,18 @@
 				<option selected>Human</option>
 				<option>Computer</option>
 			</select>
+			<!-- start game from beginning after choosing size and opponent -->
 			<button id = "start-button">Start Game</button>
 			<div>
+				<!-- start game again without losing the score -->
 				<button id = "again-button">Play Again</button>
 			</div>
 			<div>
+				<!-- reset the score board -->
 				<button id = "reset-button">Reset</button>
 			</div>
 		</aside>
+		<!-- only will show when game start -->
 		<section id = "main-content" class = "hidden">
 			<p id = "result"></p>
 			<div id = "box-container">

@@ -33,8 +33,11 @@ gameplay.onclick = hideGameplay;
 about.onclick = hideAbout;
 history.onclick = hideHistory;
 
+// run when start button clicked
 function chosen(){
+	// show the board
 	content.removeAttribute("class");
+	// initial the game status
 	counter = true;
 	player1Count = 0;
 	player1.innerHTML = player1Count;
@@ -46,6 +49,7 @@ function chosen(){
 	resultShown.innerHTML = "";
 	size = sizeSelector.value;
 	opponent = opponentSelector.value;
+	// depend on the size chose, set the different class
 	if (size === "3 X 3"){
 		boxContainer.setAttribute("class", "box-container3");
 		sizeOfBox = "box3";
@@ -67,6 +71,7 @@ function chosen(){
 		let num = 36;
 		appendBox(num);
 	}
+	// based on the opponent chose, run which function
 	box = document.getElementsByClassName(sizeOfBox);
 	if (opponent === "Human"){
 		for (let i = 0; i < box.length; i++){
@@ -78,6 +83,8 @@ function chosen(){
 		}
 	}
 }
+
+// add in box based on the size
 function appendBox(num){
 	for (let i = 0; i < num; i++){
 		let divInside = document.createElement("div");
@@ -85,12 +92,15 @@ function appendBox(num){
 		boxContainer.appendChild(divInside);
 	}
 }
+
+// when play with other player
 function input(event){
 	let clicked = event.target;
 	if (counter === true && clicked.innerHTML === "" && resultShown.innerHTML === ""){
 		resultArray = [];
 		clicked.innerHTML = "O";
 		counter = false;
+		// after moved, push the input to an array
 		for (let i = 0; i < box.length; i++){
 			resultArray.push(box[i].innerHTML);
 		}
@@ -108,40 +118,53 @@ function input(event){
 		checkVertical();
 		checkDiagonal();
 	}
+	// if the array no more empty element and no result, then tie
 	if (resultArray.includes("") === false && resultShown.innerHTML === ""){
 		resultShown.innerHTML = "Tie! No one win!";
 		tieCount++;
 		tie.innerHTML = tieCount;
 	}
 }
+
+// when play against computer
 function inputComputer(event){
 	let clicked = event.target;
+	// need to made sure the box selected must be empty
 	if (counter === true && clicked.innerHTML === "" && resultShown.innerHTML === ""){
 		resultArray = [];
 		clicked.innerHTML = "O";
 		counter = false;
+		// after moved, push the input to an array
 		for (let i = 0; i < box.length; i++){
 			resultArray.push(box[i].innerHTML);
 		}
+		// check result
 		checkHorizontal();
 		checkVertical();
 		checkDiagonal();
+		// if the result is still empty, computer then make a move
 		if (resultShown.innerHTML === "" && resultArray.includes("") === true){
 			comp();
 		}
 	}
+	// if the array no more empty element and no result, then tie	
 	if (resultArray.includes("") === false && resultShown.innerHTML === ""){
 		resultShown.innerHTML = "Tie! No one win!";
 		tieCount++;
 		tie.innerHTML = tieCount;
 	}
 }
+
+// computer random move
 function comp() {
+	// random get a number base on the number of box
 	let temporary = Math.floor(Math.random() * box.length);
+	// if the box selected is empty, put in a move and then check result
 	if (box[temporary].innerHTML === "") {
 		resultArray = [];
 		box[temporary].innerHTML = "X";
 		counter = true;
+		// after moved, push the input to an array		
 		for (let i = 0; i < box.length; i++){
 			resultArray.push(box[i].innerHTML);
 		}
@@ -149,9 +172,11 @@ function comp() {
 		checkVertical();
 		checkDiagonal();
 	} else {
+		// else run again until can a move is made
 		comp();
 	}
 }
+
 function checkHorizontal(){
 	if (size === "3 X 3"){
 		if (resultArray[0] !== "" && resultArray[0] === resultArray[1] && resultArray[0] === resultArray[2]){
@@ -202,6 +227,7 @@ function checkHorizontal(){
 		}
 	}
 }
+
 function checkVertical(){
 	if (size === "3 X 3"){
 		if (resultArray[0] !== "" && resultArray[0] === resultArray[3] && resultArray[0] === resultArray[6]){
@@ -252,6 +278,7 @@ function checkVertical(){
 		}
 	}
 }
+
 function checkDiagonal(){
 	if (size === "3 X 3"){
 		if (resultArray[0] !== "" && resultArray[0] === resultArray[4] && resultArray[0] === resultArray[8]){
@@ -282,10 +309,13 @@ function checkDiagonal(){
 		}
 	}
 }
+
 function displayResult(){
 	if (counter === false){
 		resultShown.innerHTML = "Player 1 has won!!!"
+		// increase the time of that player win
 		player1Count++;
+		// change the value of the scoreboard
 		player1.innerHTML = player1Count;
 	} else if (counter === true){
 		resultShown.innerHTML = "Player 2 has won!!!";
@@ -293,6 +323,8 @@ function displayResult(){
 		player2.innerHTML = player2Count;		
 	}	
 }
+
+// reset the board without change the score board
 function again(){
 	for (let i = 0; i < box.length; i++){
 		box[i].innerHTML = "";
@@ -300,6 +332,8 @@ function again(){
 	resultShown.innerHTML = "";
 	counter = true;
 }
+
+// reset the game to initial state
 function reset(){
 	content.setAttribute("class", "hidden");
 	again();
@@ -312,27 +346,39 @@ function reset(){
 	tieCount = 0;
 	tie.innerHTML = tieCount;
 }
+
+// show the how to play
 function showGameplay(){
 	gameplay.removeAttribute("class");
 	hideAbout();
 	hideHistory();
 }
+
+// hide the how to play
 function hideGameplay(){
 	gameplay.setAttribute("class", "hidden");
 }
+
+// show about
 function showAbout(){
 	about.removeAttribute("class");
 	hideGameplay();
 	hideHistory();
 }
+
+// hide about
 function hideAbout(){
 	about.setAttribute("class", "hidden");
 }
+
+// show history
 function showHistory(){
 	history.removeAttribute("class");
 	hideGameplay();
 	hideAbout();
 }
+
+// hide history
 function hideHistory(){
 	history.setAttribute("class", "hidden");
 }
