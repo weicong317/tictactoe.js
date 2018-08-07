@@ -1,37 +1,7 @@
-## Welcome to GitHub Pages
+# Tic Tac Toe (html, css, js)
 
-You can use the [editor on GitHub](https://github.com/weicong317/weicong317.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Classic tic tac toe game created using js.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Player able to choose the size of board from 3x3 until 6x6. Player also able to choose his opponent to be computer.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/weicong317/weicong317.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Can visit at https://weicong317.github.io/tictactoe.js/
